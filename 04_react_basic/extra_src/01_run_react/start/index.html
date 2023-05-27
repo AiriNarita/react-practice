@@ -10,11 +10,20 @@
   <script type="text/babel">
       // POINT ReactをHTMLにマウントする書き方
       const appEl = document.querySelector('#app');
-      const root = ReactDOM.createRoot(appEl);
-      root.render(<h1>こんにちは</h1>);
+        const root = ReactDOM.createRoot(appEl);
+        // function Example (){
+        //     return <h1>こんにちは</h1>;
+        // }
+        // root.render(<Example/>);
+      //allow function
+      const Example = () => {
+         return <h1>こんにちは</h1>;
+      }
+      //allow function 関数の中身がreturnのみなら以下のように変更が可能
+      //const Example = () => <h1>こんにちは</h1>;
+
       
-      // POINT React18以前の書き方
-      // ReactDOM.render(<h1>こんにちは</h1>, appEl)
+
   </script>
 </body>
 </html>
